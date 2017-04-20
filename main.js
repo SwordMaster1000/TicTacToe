@@ -1,4 +1,4 @@
-window.ui = new Ui();
+window.ui = new Ui('#message');
 let start = level => {
     window.ai = new Ai(level);
     window.game = new Game(ai);

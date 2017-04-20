@@ -36,22 +36,22 @@ class Game {
 
             if (_state.result === "X-won")
                 //X won
-                ui.switchViewTo("won");
+                ui.switchViewTo("You won");
             else if (_state.result === "O-won")
                 //X lost
-                ui.switchViewTo("lost");
+                ui.switchViewTo("You lost");
             else
                 //it's a draw
-                ui.switchViewTo("draw");
+                ui.switchViewTo("Draw game");
         }
         else {
             //the game is still running
 
             if (this.currentState.turn === "X") {
-                ui.switchViewTo("human");
+                ui.switchViewTo("Your turn");
             }
             else {
-                ui.switchViewTo("robot");
+                // ui.switchViewTo('ai');
 
                 //notify the AI player its turn has come up
                 this.ai.notify("O");

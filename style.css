@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: #fff;
 }
 
 body {
@@ -7,12 +9,55 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
+}
+
+h1 {
+    font-size: 50px;
+    transition: 0.5s linear;
+}
+#message {
+    font-size: 30px;
+    transition: 0.5s linear;
+    opacity: 1;
+}
+#message.hide {
+    opacity: 0;
+}
+
+.button {
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: 125px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    top: 100px;
+    position: relative;
+    transform: translate(0, -100%);
+    opacity: 0;
+    transition: 0.3s linear 1s;
+}
+.ended .button {
+    transform: none;
+    opacity: 1;
+}
+
+.ended #message {
+    transform: scale(5) rotateX(-360deg);
+}
+
+.ended .board {
+    transform: scale(0.5);
 }
 
 .board {
     width: 600px;
     height: 600px;
     position: relative;
+    transition: 0.3s;
 }
 
 .square {
@@ -42,6 +87,7 @@ body {
     top: 20%;
     left: 20%;
 }
+
 .square.X:before {
     content: '';
     position: absolute;
