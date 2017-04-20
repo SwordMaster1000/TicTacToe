@@ -12,15 +12,43 @@ body {
     flex-flow: column;
 }
 
+.logo>img {
+    position: fixed;
+    top: 260px;
+    left: 147px;
+    width: 130px;
+    transform: rotate(45deg);
+}
+
+.logo {
+    display: block;
+    width: 420px;
+    height: 420px;
+    position: fixed;
+    top: -210px;
+    left: -210px;
+    transform: rotate(-45deg);
+    background: #fff;
+    border-radius: 48%;
+    box-shadow: 0px 20px 20px 0px rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-45deg);
+}
+
 h1 {
     font-size: 50px;
     transition: 0.5s linear;
 }
+
 #message {
     font-size: 30px;
     transition: 0.5s linear;
     opacity: 1;
 }
+
 #message.hide {
     opacity: 0;
 }
@@ -40,6 +68,7 @@ h1 {
     opacity: 0;
     transition: 0.3s linear 1s;
 }
+
 .ended .button {
     transform: none;
     opacity: 1;
