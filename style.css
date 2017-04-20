@@ -29,8 +29,8 @@ body {
     left: -210px;
     transform: rotate(-45deg);
     background: #fff;
-    border-radius: 48%;
-    box-shadow: 0px 20px 20px 0px rgb(255, 255, 255);
+    //border-radius: 48%;
+    //box-shadow: 0px 20px 20px 0px rgb(255, 255, 255);
     transition: 0.2s;
 }
 
